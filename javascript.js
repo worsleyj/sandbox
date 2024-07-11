@@ -1,13 +1,11 @@
-const leapYears = function(year) {
-    let divisibleByFour = year % 4 == 0;
-    let divisibleByOneHundred = year % 100 == 0;
-    let divisibleByFourHundred = year % 400 == 0;
-    
-    if (divisibleByFour && !divisibleByOneHundred) {
-        return true;
-    } else if (divisibleByFourHundred) {
-        return true;
-    } else return false;
+const convertToCelsius = function(fahrenheit) {
+    return Math.round((fahrenheit-32)*(5/9)*10)/10;
 };
 
-console.log(leapYears(1900));
+const convertToFahrenheit = function(celsius) {
+    return Math.round(((celsius*(5/9))+32)*10)/10;
+};
+
+
+console.log(convertToFahrenheit(0))
+console.log(convertToCelsius(100));
