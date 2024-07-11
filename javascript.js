@@ -1,8 +1,20 @@
-const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
-// for (let i = 0; i < cats.length; i++) {
-//     console.log(cats[i]);
-// }
+const sumAll = function(num1, num2) {
+    let sum = 0;
+    let firstNum = 0;
+    let secondNum = 0;
 
-for (const item of cats) {
-    console.log(item);
-}
+    if (num1 < num2) {
+        firstNum = num1;
+        secondNum = num2;
+    } else {
+        firstNum = num2;
+        secondNum = num1;
+    }
+    for (; firstNum <= secondNum; firstNum++) {
+        sum += firstNum;
+    }
+    return sum;
+};
+
+
+console.log(sumAll(4, 1));
