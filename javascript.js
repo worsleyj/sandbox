@@ -1,20 +1,13 @@
-const sumAll = function(num1, num2) {
-    let sum = 0;
-    let firstNum = 0;
-    let secondNum = 0;
-
-    if (num1 < num2) {
-        firstNum = num1;
-        secondNum = num2;
-    } else {
-        firstNum = num2;
-        secondNum = num1;
-    }
-    for (; firstNum <= secondNum; firstNum++) {
-        sum += firstNum;
-    }
-    return sum;
+const leapYears = function(year) {
+    let divisibleByFour = year % 4 == 0;
+    let divisibleByOneHundred = year % 100 == 0;
+    let divisibleByFourHundred = year % 400 == 0;
+    
+    if (divisibleByFour && !divisibleByOneHundred) {
+        return true;
+    } else if (divisibleByFourHundred) {
+        return true;
+    } else return false;
 };
 
-
-console.log(sumAll(4, 1));
+console.log(leapYears(1900));
