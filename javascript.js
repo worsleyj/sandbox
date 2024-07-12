@@ -18,8 +18,9 @@ const buttonTwo = document.querySelector("#two");
 buttonTwo.onclick = () => alert("hello World 2");
 
 const buttonThree = document.querySelector("#three");
-buttonThree.addEventListener("click", () => {
+buttonThree.addEventListener("click", (e) => {
     alert("hello WORLD 3");
+    e.target.style.background = "blue";
 })
 
 function alertFunction() {
