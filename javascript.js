@@ -21,3 +21,7 @@ const buttonThree = document.querySelector("#three");
 buttonThree.addEventListener("click", () => {
     alert("hello WORLD 3");
 })
+
+function alertFunction() {
+    alert("HELLO WORLD!!");
+}
