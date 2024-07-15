@@ -1,28 +1,11 @@
-const container = document.querySelector("#container");
+const ul = document.querySelector("ul")
+const input = document.querySelector("input")
+const button = document.querySelector("button")
 
-const display = document.querySelector(".display");
+button.addEventListener("click", () => {
+    let currInput = input.value;
+    // console.log(currInput);
 
-const div = document.createElement("div");
-const div2 = document.createElement("div2");
-
-div.textContent = "DIV"
-div2.textContent = "DIV2"
-
-display.appendChild(div);
-display.appendChild(div2);
-
-div2.style.color = "red";
-div.style.cssText= "color: blue; background: grey;";
-
-const buttonTwo = document.querySelector("#two");
-buttonTwo.onclick = () => alert("hello World 2");
-
-const buttonThree = document.querySelector("#three");
-buttonThree.addEventListener("click", (e) => {
-    alert("hello WORLD 3");
-    e.target.style.background = "blue";
+    input.value = "";
 })
 
-function alertFunction() {
-    alert("HELLO WORLD!!");
-}
