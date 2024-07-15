@@ -17,8 +17,10 @@ button.addEventListener("click", () => {
     delButton.textContent = "Delete";
     delButton.addEventListener("click", () => {
         li.remove()
+        input.focus();
     })
 
     ul.appendChild(li);
     input.value = "";
+    input.focus();
 })
