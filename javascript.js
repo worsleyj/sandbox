@@ -10,3 +10,27 @@ function sumOfTripledEvens(array) {
 }
 
 console.log([sumOfTripledEvens([1, 2, 4, 6])]);
+
+function addOne(num) {
+    if (num % 2 ==0 ) {
+        return num * 3;
+    } else return num;
+}
+
+const arr = [1, 2 ,3 , 4 , 5];
+const mappedArr = arr.map(addOne)
+console.log(mappedArr);
+
+function isOdd(num) {
+    return num % 2 !== 0;
+}
+
+const oddNums = arr.filter(isOdd)
+console.log(oddNums);
+console.log();
+
+const productOfAllNums = arr.reduce((total, currItem) => {
+    return total * currItem;
+}, 1);
+
+console.log(productOfAllNums);
