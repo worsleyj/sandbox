@@ -1,16 +1,12 @@
-let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
-}
-
-function mutliplyNumeric(menu) {
-    for(let key in menu) {
-        menu[key] = menu[key] *2;
+function sumOfTripledEvens(array) {
+    sum = 0;
+    for (let i = 0; i < array.length;i++) {
+        if (array[i] % 2 == 0) {
+            let tripledValued = array[i] *  3;
+            sum += tripledValued;
+        }
     }
+    return sum;
 }
 
-mutliplyNumeric(menu)
-mutliplyNumeric(menu)
-mutliplyNumeric(menu)
-console.log(menu);
+console.log([sumOfTripledEvens([1, 2, 4, 6])]);
