@@ -25,6 +25,7 @@ function isOdd(num) {
     return num % 2 !== 0;
 }
 
+
 const oddNums = arr.filter(isOdd)
 console.log(oddNums);
 console.log();
@@ -34,3 +35,21 @@ const productOfAllNums = arr.reduce((total, currItem) => {
 }, 1);
 
 console.log(productOfAllNums);
+
+function isEven(num) {
+    return num%2 ==0;
+}
+
+function tripleNum(num) {
+    return num*3;
+}
+
+function sumOfTripledEvensRewrite(array) {
+    const evenNums = array.filter(isEven);
+    const tripledNums = evenNums.map(tripleNum);
+    const sumOfTripledNums = tripledNums.reduce((total, currItem) => total + currItem)
+    console.log(sumOfTripledNums);
+    return sumOfTripledNums;
+}
+
+console.log(sumOfTripledEvensRewrite([1, 2, 4 ,6]));
