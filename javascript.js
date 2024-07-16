@@ -1,9 +1,16 @@
-function isEmpty(object) {
-    for(let key in object) {
-        return false;
-    }
-    return true;
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
 }
 
-let user = {}
-console.log(isEmpty(user));
+function mutliplyNumeric(menu) {
+    for(let key in menu) {
+        menu[key] = menu[key] *2;
+    }
+}
+
+mutliplyNumeric(menu)
+mutliplyNumeric(menu)
+mutliplyNumeric(menu)
+console.log(menu);
