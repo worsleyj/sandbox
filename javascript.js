@@ -1,27 +1,15 @@
-const sum = function(array) {
-    const total = array.reduce((total, current) => {
-      return total + current;
-    })
-    return total
-  };
+const palindromes = function (string) {
+  const validChar = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-console.log(sum([1, 2, 3]));
+  let newString = "";
+  stringArr = string.toLowerCase().split('');
+  cleanedString = stringArr.filter((char) => validChar.includes(char)).join('');
 
-const multiply = function(array) {
-    const multiplied = array.reduce((total, current) => {
-      return total * current;
-    })
-    return multiplied;
-  };
+  reversedString = cleanedString.split('').reverse().join('');
+  
+  let isPalindrome = (cleanedString == reversedString);
+    return isPalindrome;
+};
 
-console.log(multiply([1,2,3,4]));
-
-const factorial = function(num) {
-    let factorial = 1;
-    for (let i = 0; i < num; i++) {
-      factorial *= num-i;
-    }
-    return factorial;
-  };
-
-console.log(factorial(5));
+console.log(palindromes("TEST"));
+console.log(palindromes("RACECaR"));
