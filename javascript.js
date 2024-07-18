@@ -1,15 +1,17 @@
-const palindromes = function (string) {
-  const validChar = 'abcdefghijklmnopqrstuvwxyz0123456789';
+const fibonacci = function(index) {
+  index = parseInt(index);
+  if (index < 0) {
+    return "OOPS";
+  }
 
-  let newString = "";
-  stringArr = string.toLowerCase().split('');
-  cleanedString = stringArr.filter((char) => validChar.includes(char)).join('');
-
-  reversedString = cleanedString.split('').reverse().join('');
-  
-  let isPalindrome = (cleanedString == reversedString);
-    return isPalindrome;
+  fibonacciArray = [1, 1]
+  for (let i = 1; i < index-1; i++) {
+    nextValue = fibonacciArray[i] + fibonacciArray[i-1];
+    fibonacciArray.push(nextValue)
+  }
+  return fibonacciArray[index-1];
 };
 
-console.log(palindromes("TEST"));
-console.log(palindromes("RACECaR"));
+
+console.log(fibonacci("4"));
+console.log(fibonacci(25));
