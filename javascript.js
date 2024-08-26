@@ -1,12 +1,11 @@
-let promise = new Promise(function (resolve, reject) {
-  // the function is executed automatically when the promise is constructed
-
-  // after 1 second signal that the job is done with the result "done"
-  setTimeout(() => resolve("done"), 1000);
-});
-promise.finally(() => console.log("completed"));
-
-promise.then(
-  (result) => alert(result), // doesn't run
-  (error) => alert(error)
-);
+const img = document.querySelector("img");
+fetch(
+  "https://api.giphy.com/v1/gifs/translate?api_key=6ai0C1nbu2BfXTGjoBtsrH3wUBeiqcqF&s=cats",
+  { mode: "cors" }
+)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (response) {
+    img.src = response.data.images.original.url;
+  });
