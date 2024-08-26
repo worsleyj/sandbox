@@ -1,4 +1,6 @@
 const img = document.querySelector("img");
+const searchBox = document.querySelector("input");
+const newGifBtn = document.querySelector("button");
 
 function newCatGif(searchTerm) {
   fetch(
@@ -14,7 +16,7 @@ function newCatGif(searchTerm) {
       img.src = response.data.images.original.url;
     });
 }
-const newGifBtn = document.querySelector("button");
+
 newGifBtn.addEventListener("click", () => {
-  newCatGif("cats");
+  newCatGif(searchBox.value);
 });
