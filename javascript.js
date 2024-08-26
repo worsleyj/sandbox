@@ -14,6 +14,9 @@ function newCatGif(searchTerm) {
     .then(function (response) {
       console.log(response.data.images.original.url);
       img.src = response.data.images.original.url;
+    })
+    .catch((error) => {
+      console.log(error);
     });
 }
 
