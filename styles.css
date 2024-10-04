@@ -10,5 +10,6 @@ img:hover {
 @media (max-width: 500px) {
   body {
     margin: 100px;
+    background-color: green;
   }
 }
